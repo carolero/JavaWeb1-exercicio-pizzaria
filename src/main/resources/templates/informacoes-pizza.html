@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sabor</title>
+</head>
+<body>
+    
+    <div>
+        <div th:each="pizza : ${pizzas}">
+            <h3 th:text="${pizza.sabor}"></h3>
+            <p th:text="${pizza.massa}"></p>
+            <p th:text="${pizza.tipoDeBorda}"></p>
+            <p th:text="${pizza.valor}"></p>
+        </div>
+    </div>
+
+</body>
+</html>

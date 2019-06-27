@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizzaria</title>
+</head>
+<body>
+    
+    <div>
+        <div th:each="pizza : ${pizzas}">
+            <a href="" th:attr=" href=@{${pizza.sabor}}" th:text="${pizza.sabor}"></a>
+        </div>
+    </div>
+    <br>
+    <br>
+	<p>Deseja cadastrar uma nova pizza?</p>
+    <a href="/cadastro">Cadastrar pizza</a>
+
+</body>
+</html>
