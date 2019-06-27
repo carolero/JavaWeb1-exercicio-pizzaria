@@ -2,6 +2,7 @@ package com.br.exercicio.pizzaria.services;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -28,8 +29,15 @@ public class PizzariaService {
 		pizzas.put(pizzas.size()+1, pizzariaModel);
 	}
 	
-	public PizzariaModel buscarPizzas(int id) {
-		return this.pizzas.get(id);
+	public PizzariaModel buscarPizza(String sabor) {
+		PizzariaModel informacao = null;
+		
+		for (PizzariaModel pizza : pizzas.values()) {
+			if(pizza.getSabor().equalsIgnoreCase(sabor)) {
+				informacao = pizza;
+			}
+		}
+		return informacao;
 	}
-
+	
 }

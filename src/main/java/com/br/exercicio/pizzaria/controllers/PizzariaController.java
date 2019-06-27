@@ -36,6 +36,11 @@ public class PizzariaController {
 		return "redirect:/cadastro";
 	}
 	
-	
+	@GetMapping("/{sabor}")
+	public ModelAndView buscarPizza(@PathVariable String sabor) {
+		ModelAndView modelAndView = new ModelAndView("informacoes-pizza.html");
+		modelAndView.addObject("pizzas", pizzariaService.buscarPizza(sabor));
+		return modelAndView;
+	}
 	
 }
