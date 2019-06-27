@@ -8,14 +8,27 @@
 </head>
 <body>
     
-    <div method>
-        <div th:each="pizza : ${pizzas}">
+    <div>
+        <table th:each="pizza : ${pizzas}" height="50" border="0" cellpadding="0" cellspacing="0">
             <h3 th:text="${pizza.sabor}"></h3>
-            <p th:text="${pizza.massa}"></p>
-            <p th:text="${pizza.tipoDeBorda}"></p>
-            <p th:text="${pizza.valor}"></p>
-        </div>
+            <tr>
+                <td align="center" width="100"><h4>Massa: </h4></td>
+                <td><p th:text="${pizza.massa}"></p></td>
+            </tr>
+            <tr>
+                <td align="center" width="100"><h4>Borda: </h4></td>
+                <td><p th:text="${pizza.tipoDeBorda}"></p></td>
+            </tr>
+            <tr>
+                <td align="center" width="100"><h4>Valor R$ </h4></td>
+                <td><p th:text="${pizza.valor}"></p></td>
+            </tr>
+            
+        </table>
     </div>
+    <br>
+    <br>
+    <a href="/">Voltar ao menu</a>
 
 </body>
 </html>
