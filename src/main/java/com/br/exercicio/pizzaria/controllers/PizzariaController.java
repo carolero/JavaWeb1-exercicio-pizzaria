@@ -33,7 +33,7 @@ public class PizzariaController {
 	@PostMapping
 	public String adicionarPizza(PizzariaModel pizzariaModel) {
 		pizzariaService.adicionarPizza(pizzariaModel);
-		return "redirect:/cadastro";
+		return "redirect:/";
 	}
 	
 	@GetMapping("/{sabor}")
